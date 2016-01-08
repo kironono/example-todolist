@@ -71,6 +71,8 @@ GEM
       capybara (~> 2.2)
       minitest (~> 5.0)
       rake
+    minitest-ci (3.0.3)
+      minitest (~> 5.0, >= 5.0.6)
     minitest-metadata (0.5.3)
       minitest (>= 4.7, < 6.0)
     minitest-rails (2.2.0)
@@ -166,6 +168,7 @@ DEPENDENCIES
   byebug
   jbuilder (~> 2.0)
   minitest
+  minitest-ci
   minitest-rails
   minitest-rails-capybara
   minitest-reporters
