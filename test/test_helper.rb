@@ -1,13 +1,24 @@
+require "simplecov"
+# save to CircleCI's artifacts directory if we're on CircleCI
+if ENV['CIRCLE_ARTIFACTS']
+  dir = File.join(ENV['CIRCLE_ARTIFACTS'], "coverage")
+  SimpleCov.coverage_dir(dir)
+end
+SimpleCov.start 'rails'
+
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
+
 require "rails/test_help"
+
 require "minitest/rails"
+
 require "minitest/reporters"
 Minitest::Reporters.use!
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
-# require "minitest/rails/capybara"
+require "minitest/rails/capybara"
 
 # Uncomment for awesome colorful output
 # require "minitest/pride"

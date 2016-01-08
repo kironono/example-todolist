@@ -36,6 +36,7 @@ group :development, :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
   gem 'minitest-ci'
+  gem 'simplecov'
 end
 
 group :development do
